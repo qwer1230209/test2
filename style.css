@@ -1,0 +1,337 @@
+@charset "utf-8";
+
+
+
+
+/*---modal---*/
+#modal {
+    color: #888888;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    background: rgba(0,0,0, 0.6);
+}
+
+#modal .body {
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: -20%;
+    transform: translate(-50%, -50%); background: white;
+}
+#modal.active {
+    display: block;
+    opacity: 1;
+    
+}
+#modal.active .body {
+    top: 25%;
+    opacity: 1;
+}
+#modal .body img {
+    display: block; margin-bottom: 20px;
+
+}
+#modal .body .img>h1 {
+    text-align: center;
+    padding: 30px;
+    
+}
+#modal .body .img>p {
+    text-align: center;
+    padding: 30px;
+    
+}
+#modal .body .button {
+    width: 100px;
+    border: 1px solid #000;
+    background-color: white;
+    margin-left: 160px; text-align: center;
+}
+
+
+/*----------------------reset ---------------*/
+body {
+   
+    background: #ebebeb;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "맑은 고딕", sans-serif;
+    line-height: 150%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+li,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+img {
+    max-width: 100%;
+}
+
+/*----------------------reset ---------------*/
+
+#container {
+
+    width: 1200px;
+
+    margin: 0 auto;
+}
+header {
+    float: left;
+    width: 200px;
+    height: 650px;
+
+  background: linear-gradient(to bottom, rgba(255,202,109,0.65) 0%,rgba(0,0,0,0) 100%);
+}
+
+.logo {
+    width: 200px;
+
+
+    background: #f39a00;
+    border-bottom: #fff dotted 1px;
+
+
+}
+
+.menu {
+    position: relative;
+}
+
+.allmenu > li > a {
+    color: black;
+    border-bottom: 1px dotted #fff;
+    display: block;
+    background: #f39a00;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.allmenu > li > a:hover {
+
+    background: #ffca6d
+}
+
+.allmenu > li > ul {
+/*    display: none;*/
+}
+.allmenu > li {
+    position: relative;
+    
+}
+
+.subme {
+
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 150px;
+    z-index: 999;
+    
+}
+
+/*
+.subme1 {
+z-index: 999;
+    position: absolute;
+    width: 150px;
+
+transition-duration: 0.1s;
+}
+
+.subme2 {
+z-index: 999;
+    position: absolute;
+    width: 150px;
+    transition-duration: 0.1s;
+
+}
+
+.subme3 {
+z-index: 999;
+    position: absolute;
+    width: 150px;
+   transition-duration: 0.1s;
+
+}
+
+.subme4 {
+z-index: 999;
+    position: absolute;
+    width: 150px;
+    left: 200px;
+    top: 133px;
+
+}
+*/
+
+.allmenu > li > ul > li > a {
+    border-color: white;
+    border-bottom: 1px dotted;
+
+    display: block;
+    padding: 10px;
+    background: #41403c;
+    color: white;
+    transition: all 0.3s;
+}
+
+.allmenu > li > ul > li > a:hover {
+    background: #5b5b5b;
+}
+
+/*-------header-------*/
+
+
+/*-------contents-------*/
+#contents {
+    height: 550px;
+   
+    float: left;
+}
+
+.slide {
+    width: 800px;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+}
+
+.slide > img {
+    position: absolute;
+}
+
+.notice {
+   
+    width: 266px;
+    float: left;
+}
+
+.notice > ul > h3 {
+    padding: 7px;
+    color: #888888;
+    text-align: center;
+    background: #f39a00;
+}
+
+.notice > ul > li > a {
+    border-bottom: 1px solid #f39a00;
+    display: block;
+    padding: 3px;
+    font-size: 13px;
+    color: #888888;
+    background-color: #fff;
+}
+.notice > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.gal {
+    
+    width: 266px;
+    background: #f39a00;
+    float: left;
+
+}
+.gal > h3 {
+    padding: 7.3px;
+    color: #888888;
+    text-align: center;
+    background: #fff;
+   
+}
+.gal>img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #888888;
+    border-radius: 50%;
+    margin: 1px;
+    margin-top: 31px;
+    margin-bottom: 30px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.gal>img:hover {
+    opacity: 0.6;
+}
+
+.ban {
+    cursor: pointer;
+    width: 265px;
+    height: 182px;
+    float: left;
+    border: 2px solid #f39a00;
+    background: #fff;
+}
+.ban>img {
+    
+    margin-top: 28px;
+}
+footer {
+    width: 800px;height: 100px;
+   
+    float: left;
+    background: #41403c;
+}
+.footlogo {
+    float: left;
+    
+}
+footer .fotmenu {
+    color: white;
+    width: 590px;
+    height: 40px;
+    font-size: 12px;
+    float: left; text-align: center;
+    line-height: 1.2em;
+    margin-top: 20px;
+
+}
+.foticon {
+    color: white;
+    font-size: 30px;
+    margin-right: 4px;
+    
+}
+.foticon i {
+    cursor: pointer;
+    margin: 4px;
+    float: right;
+}
